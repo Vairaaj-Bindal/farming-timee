@@ -1,0 +1,169 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white
+}
+
+header {
+    background-color: #5C4033;
+    color: white;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: #3a5a40;
+    color: white;
+    text-align: center;
+    padding: 5em 0;
+    position: relative;
+    z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+
+.hero-text {
+    max-width: 600px;
+    margin: auto;
+    color: white;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 1em 2em;
+    text-decoration: none;
+    color: white;
+    background-color: #f39c12;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e74c3c;
+}
+
+.features {
+    padding: 4em 0;
+    text-align: center;
+    background-color: #3a5a40;
+}
+
+.about {
+    background-color: #3a5a40;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.contact {
+    padding: 4em 0;
+    text-align: center;
+    background-color: #3a5a40;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #333;
+    color: #3a5a40;
+    text-align: center;
+    padding: 1em 0;
+}
+.logo {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px; /* Adjust the max-height based on your design */
+    margin-right: 1em; /* Adjust the margin as needed */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Add transition for color change */
+}
+
+.nav-links a:hover {
+    color: #f39c12; /* Change the color on hover */
+}
+
+.cta-btn,
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for background and text color change */
+}
+
+.cta-btn:hover,
+button:hover {
+    background-color: #2980b9;
+    color: wheat; /* Change the text color on hover */
+}
+
+
