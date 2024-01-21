@@ -1,21 +1,20 @@
 import pandas as pd
-import sklearn
-from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score
+from sklearn import model_selection
+from sklearn import tree
+from sklearn import metrics
 
 # Load the dataset (replace 'crop_data.csv' with your actual dataset file)
-data = pd.read_csv('Crop_recommendation.csv')
+data = pd.read_csv('/Users/tript/farm/Crop_recommendation.csv')
 
 # Separate features (soil and environmental parameters) and target (crop categories)
 X = data[['N', 'P', 'K', 'temperature', 'ph', 'humidity', 'rainfall']]
 y = data['label']
 
 # train and test   
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_size=0.4, random_state=42)
 
 # Decision Tree !!
-model = DecisionTreeClassifier(random_state=42)
+model = tree.DecisionTreeClassifier(random_state=42)
 
 # Train i
 model.fit(X_train, y_train)
@@ -24,7 +23,7 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 
 # Calcuate accuracy
-accuracy = accuracy_score(y_test, y_pred)
+accuracy = metrics.accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.2f}")
 
 N = float(input("Enter Nitrogen level: "))
