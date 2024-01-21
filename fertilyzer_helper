@@ -1,0 +1,42 @@
+import pandas as pd
+from sklearn import model_selection
+from sklearn import tree
+from sklearn import metrics
+
+data = pd.read_csv('/Users/tript/farm/Fp.csv')
+
+x = data[['Temparature','Humidity ','Moisture','Nitrogen','Potassium','Phosphorous']]
+y= data['Fertilizer Name']
+
+#look at accuracy precision and recall(experiment with test train split)
+x_train, x_test, y_train, y_test = model_selection.train_test_split(x, y, test_size=0.4, random_state=42)
+
+model = tree.DecisionTreeClassifier(random_state=42)
+ 
+model.fit(x_train,y_train)
+
+y_pred = model.predict(x_test)
+
+#accuracy 
+accuracy = metrics.accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy:.2f}")
+
+Temparature = float(input("Enter Temperature level: "))
+Humidity = float(input("Enter Humidity level: "))
+Moisture = float(input("Enter Moisture level: "))
+Nitrogen = float(input("Enter Nitrogen level: "))
+Potassium = float(input("Enter Potassium level: "))
+Phosphorous = float(input("Enter Phosphorous level: "))
+
+# Create a DataFrame for the new data
+new_data = pd.DataFrame({
+    'Temparature': [Temparature],
+    'Humidity ': [Humidity],
+    'Moisture': [Moisture],
+    'Nitrogen': [Nitrogen],
+    'Potassium': [Potassium],
+    'Phosphorous': [Phosphorous]
+})
+
+predicted_crop = model.predict(new_data)
+print(f"Predicted Crop Category: {predicted_crop[0]}")
