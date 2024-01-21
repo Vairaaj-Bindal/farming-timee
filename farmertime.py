@@ -42,7 +42,7 @@ new_data = pd.DataFrame({
     'temperature': [temperature],
     'ph': [ph],
     'humidity': [humidity],
-    'Rainfall': [rainfall]
+    'rainfall': [rainfall]
 })
 
 # Predict the crop category based on the input
