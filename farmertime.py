@@ -5,7 +5,7 @@ from sklearn import metrics
 from sklearn.model_selection import train_test_split
 
 # Load the dataset (replace 'Crop_recommendation.csv' with your actual dataset file)
-data = pd.read_csv('/Users/tript/farm/Crop_recommendation.csv')
+data = pd.read_csv('/Users/tript/farm/Crop_recommendation.csv.numbers')
 
 # Separate features (soil and environmental parameters) and target (crop categories)
 X = data[['N', 'P', 'K', 'temperature', 'ph', 'humidity', 'rainfall']]
